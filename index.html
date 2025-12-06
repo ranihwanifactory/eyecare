@@ -24,11 +24,11 @@
     <!-- PWA Theme Color -->
     <meta name="theme-color" content="#059669" />
 
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS (Keep CDN for simplicity in this setup, or migrate to postcss for prod) -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Manifest for PWA (Dynamically injected for this environment, usually a separate file) -->
-    <link rel="manifest" id="manifest-placeholder" href="manifest.json" />
+    <!-- Manifest for PWA -->
+    <link rel="manifest" href="manifest.json" />
 
     <style>
       /* Smooth font rendering */
@@ -55,11 +55,13 @@
   <script type="importmap">
 {
   "imports": {
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "vite": "https://aistudiocdn.com/vite@^7.2.6",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
   }
 }
 </script>
@@ -67,6 +69,7 @@
 </head>
   <body class="bg-slate-50 text-slate-900 h-full overflow-x-hidden selection:bg-emerald-200 selection:text-emerald-900">
     <div id="root"></div>
+    <!-- Vite entry point -->
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>
