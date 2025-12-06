@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>눈건강운동 - 당신의 눈 지킴이</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="하루 5분 눈건강운동. 안구 건조증 완화, 시력 보호, 눈 피로 회복을 위한 필수 앱." />
+    <meta name="keywords" content="눈건강운동, 안구운동, 시력보호, 눈피로, 안구건조증, 눈스트레칭" />
+    <meta name="author" content="EyeCare Team" />
+    
+    <!-- Open Graph / Facebook / Kakao -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="눈건강운동 - 하루 5분 투자" />
+    <meta property="og:description" content="스마트폰과 PC로 지친 눈, 지금 바로 풀어주세요." />
+    <meta property="og:image" content="https://picsum.photos/1200/630" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="눈건강운동" />
+    <meta name="twitter:description" content="안과 전문의 추천 눈 건강 루틴." />
+    
+    <!-- PWA Theme Color -->
+    <meta name="theme-color" content="#059669" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Manifest for PWA (Dynamically injected for this environment, usually a separate file) -->
+    <link rel="manifest" id="manifest-placeholder" href="manifest.json" />
+
+    <style>
+      /* Smooth font rendering */
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+      /* Custom scrollbar for webkit */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-50 text-slate-900 h-full overflow-x-hidden selection:bg-emerald-200 selection:text-emerald-900">
+    <div id="root"></div>
+    <!-- Script to register Service Worker would go here in production -->
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
