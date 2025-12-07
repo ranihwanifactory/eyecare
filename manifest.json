@@ -1,21 +1,21 @@
 {
-  "name": "눈건강운동",
-  "short_name": "눈건강",
-  "start_url": "/",
+  "name": "EyeZen",
+  "short_name": "EyeZen",
+  "start_url": ".",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#059669",
-  "description": "Daily Eye Exercises for Health",
+  "background_color": "#ecfdf5",
+  "theme_color": "#ecfdf5",
+  "description": "눈 건강을 위한 운동 가이드",
   "icons": [
     {
-      "src": "https://picsum.photos/192/192",
+      "src": "https://api.iconify.design/lucide:eye.svg?color=%2310b981&width=192&height=192",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/svg+xml"
     },
     {
-      "src": "https://picsum.photos/512/512",
+      "src": "https://api.iconify.design/lucide:eye.svg?color=%2310b981&width=512&height=512",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/svg+xml"
     }
   ]
 }

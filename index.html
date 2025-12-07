@@ -2,74 +2,60 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://api.iconify.design/lucide:eye.svg?color=%2310b981" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>눈건강운동 - 당신의 눈 지킴이</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="하루 5분 눈건강운동. 안구 건조증 완화, 시력 보호, 눈 피로 회복을 위한 필수 앱." />
-    <meta name="keywords" content="눈건강운동, 안구운동, 시력보호, 눈피로, 안구건조증, 눈스트레칭" />
-    <meta name="author" content="EyeCare Team" />
-    
-    <!-- Open Graph / Facebook / Kakao -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="눈건강운동 - 하루 5분 투자" />
-    <meta property="og:description" content="스마트폰과 PC로 지친 눈, 지금 바로 풀어주세요." />
-    <meta property="og:image" content="https://picsum.photos/1200/630" />
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="눈건강운동" />
-    <meta name="twitter:description" content="안과 전문의 추천 눈 건강 루틴." />
-    
-    <!-- PWA Theme Color -->
-    <meta name="theme-color" content="#059669" />
-
-    <!-- Tailwind CSS (Keep CDN for simplicity in this setup, or migrate to postcss for prod) -->
+    <meta name="theme-color" content="#ecfdf5" />
+    <title>EyeZen - 당신의 눈 건강 파트너</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Manifest for PWA -->
-    <link rel="manifest" href="manifest.json" />
-
-    <style>
-      /* Smooth font rendering */
-      body {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#ecfdf5',
+                100: '#d1fae5',
+                200: '#a7f3d0',
+                300: '#6ee7b7',
+                400: '#34d399',
+                500: '#10b981',
+                600: '#059669',
+                700: '#047857',
+                800: '#065f46',
+                900: '#064e3b',
+              }
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 3s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            }
+          }
+        }
       }
-      /* Custom scrollbar for webkit */
-      ::-webkit-scrollbar {
-        width: 6px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #f1f5f9;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #cbd5e1;
-        border-radius: 3px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #94a3b8;
-      }
-    </style>
-<script type="importmap">
+    </script>
+    <link rel="manifest" href="/manifest.json" />
+  <script type="importmap">
 {
   "imports": {
     "react": "https://aistudiocdn.com/react@^19.2.1",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
     "react/": "https://aistudiocdn.com/react@^19.2.1/",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
     "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
-    "vite": "https://aistudiocdn.com/vite@^7.2.6",
-    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.10.1",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.25"
   }
 }
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-slate-50 text-slate-900 h-full overflow-x-hidden selection:bg-emerald-200 selection:text-emerald-900">
+  <body class="bg-slate-50 text-slate-900 antialiased selection:bg-primary-200 selection:text-primary-900">
     <div id="root"></div>
-    <!-- Vite entry point -->
-    <script type="module" src="/index.tsx"></script>
-  </body>
+  <script type="module" src="/index.tsx"></script>
+</body>
 </html>

@@ -1,31 +1,29 @@
+import { LucideIcon } from 'lucide-react';
+
 export enum ExerciseType {
-  SMOOTH_PURSUIT = 'SMOOTH_PURSUIT', // Following a moving object
-  SACCADE = 'SACCADE', // Jumping focus between points
-  BLINKING = 'BLINKING', // Conscious blinking
-  NEAR_FAR = 'NEAR_FAR', // Focus change
-  PALMING = 'PALMING', // Relaxation
-  HORIZONTAL_TRACKING = 'HORIZONTAL_TRACKING' // Left-Right tracking
+  FIGURE_EIGHT = 'FIGURE_EIGHT',
+  PALMING = 'PALMING',
+  FOCUS_CHANGE = 'FOCUS_CHANGE',
+  BLINKING = 'BLINKING',
+  RULE_20_20_20 = 'RULE_20_20_20',
+  CIRCLE = 'CIRCLE',
+  LEFT_RIGHT = 'LEFT_RIGHT',
+  RANDOM = 'RANDOM'
 }
 
 export interface Exercise {
   id: string;
+  type: ExerciseType;
   title: string;
   description: string;
-  type: ExerciseType;
   durationSeconds: number;
+  icon: LucideIcon;
+  color: string;
   difficulty: 'Easy' | 'Medium' | 'Hard';
-  instructions: string;
+  instructions: string[];
 }
 
-export interface UserHistory {
-  date: string;
+export interface HistoryRecord {
+  date: string; // ISO string
   exerciseId: string;
-  completed: boolean;
-}
-
-export interface ChatMessage {
-  id: string;
-  role: 'user' | 'model';
-  text: string;
-  timestamp: number;
 }

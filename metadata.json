@@ -1,7 +1,5 @@
 {
-  "name": "눈건강운동",
-  "description": "안과 전문의가 설계한 안구 운동 및 건강 관리 앱입니다. 눈의 피로를 풀고 시력을 보호하세요.",
-  "requestFramePermissions": [
-    "microphone"
-  ]
+  "name": "EyeZen (아이젠)",
+  "description": "현대인을 위한 시력 보호 및 눈 운동 가이드 앱. 다양한 눈 운동 루틴과 휴식 알림을 제공합니다.",
+  "requestFramePermissions": []
 }
